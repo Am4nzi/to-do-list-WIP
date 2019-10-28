@@ -12,13 +12,17 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-
        <h1> <%= kindOfDay %></h1>
        
        <u1>
            <li>Buy Food</li>
            <li>Cook Food</li>
            <li>Eat Food</li>
+           
+           <% for (var i = 0; i < newListItems.length; i++) { %>
+                <li> <%= newListItems[i] %></li>
+            <% }    %>
+
        </u1>
 
        <form class="" action="/" method="post">
