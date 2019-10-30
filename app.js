@@ -13,6 +13,10 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 app.get("/", function(req, res) {
+  res.render("home");
+})
+
+app.get("/today", function(req, res) {
 
   const day = date.getDate();
 
@@ -22,7 +26,7 @@ app.get("/", function(req, res) {
   });
 });
 
-app.post("/", function(req, res) {
+app.post("/today", function(req, res) {
 
   const item = req.body.newItem;
 
@@ -31,24 +35,24 @@ app.post("/", function(req, res) {
     res.redirect("/work");
   } else {
     items.push(item);
-    res.redirect("/");
+    res.redirect("/today");
   }
 
 });
 
-app.get("/work", function(req, res) {
+app.get("/thisweek", function(req, res) {
   res.render("list", { listTitle: "Work List", newListItems: workItems });
 });
 
-app.get("/about", function(req, res) {
-  res.render("about");
+app.get("/home", function(req, res) {
+  res.render("home");
 })
 
-app.post("work", function(req, res) {
+app.post("thisweek", function(req, res) {
   const item = req.body.newItem;
   workItems.push(item);
   workItems.push(item);
-  res.redirect("/work");
+  res.redirect("thisweek");
 });
 
 app.listen(8080, function() {
