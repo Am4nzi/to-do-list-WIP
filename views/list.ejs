@@ -1,7 +1,9 @@
     <%- include("header") -%>
     
+    <div class = "wrapper">
+
     <div id="heading" class="box">
-        <h1> <%= listTitle %></h1>
+        <h2> <%= listTitle %></h2>
     </div>
 
     <div class="box">
@@ -12,10 +14,13 @@
         </div>
 
         <% } %>
-        <form class="item" action="/today" method="post">
-            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+        <form class="item" action="/" method="post">
+            <input type="text" name="newItem" placeholder="Enter New Item" autocomplete="off">
             <button type="submit" name="list" value=<%= listTitle %>>+</button>
         </form>
     </div>
+
+
+</div>
 
     <%- include("footer") -%>

@@ -4,6 +4,11 @@ html {
   min-height: 850px;
 }
 
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: black;
+}
+
 .wrapper {
   display: flex;
   justify-content: center;
@@ -13,19 +18,31 @@ html {
 }
 
 h1 {
+  font-family: "Source Sans Pro", sans-serif;
+
   color: black;
   padding: 2px;
-  font-size: 2.9rem;
-  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2.9rem; 
+  font-weight: 300;
+}
+
+h2 {
+  color: black;
+  padding: 2px;
+  font-size: 2rem;
   font-weight: 300;
 }
 
 .box {
-  max-width: 400px;
+  width: 425px;
+  max-width: 425px;
   margin: 50px auto;
-  background: white;
+  color: black;
+  background-color: #f39f86;
+  background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
   border-radius: 5px;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  opacity: 0.95;
 }
 
 .home-button {
@@ -40,69 +57,53 @@ h1 {
   text-align: center;
 }
 
-.blurred-box {
-  position: relative;
-  width: 850px;
-  height: 850px;
-  background: inherit;
-  border-radius: 5px;
-  overflow: hidden;
-}
 
-.blurred-box:after {
-  border-radius: 5px;
-  content: "";
-  height: 800px;
-  background: inherit;
-  position: absolute;
-  left: 2px;
-  right: 2px;
-  top: 2px;
-  bottom: 0;
-  box-shadow: inset 0 0 0 400px rgba(255, 255, 255, 0.05);
-  filter: blur(1px);
-}
-
-/* .heading {
+  #heading {
     outline: 0;
     border: 1px solid rgba(255, 255, 255, 0.4);
-    background-color: rgba(255, 255, 255, 0.3);
-    width: 350px;
-    border-radius: 6px;
+    background-color: #f39f86;
+    background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+    width: 370px;
+    border-radius: 5px;
     padding: 0 15px 0 15px;
     margin: 0 auto 30px auto;
     display: block;
     text-align: center;
     color: white;
-    transition-duration: 0.25s; 
-  } */
+  
+  }
 
 .item {
   min-height: 70px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #f1f1f1;
+  color: black;
+  
+  
 }
 
 .item:last-child {
   border-bottom: 0;
+  
 }
 
 input:checked + p {
   text-decoration: line-through;
-  text-decoration-color: #a683e3;
+  text-decoration-color: black;
 }
 
 input[type="checkbox"] {
   margin: 20px;
+  
 }
 
 p {
   margin: 0;
   padding: 20px;
-  font-size: 20px;
+  font-size: 1.8rem;
   font-weight: 200;
-  color: white;
+  color: black;
 }
 
 form {
@@ -115,10 +116,11 @@ button {
   width: 50px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: #a683e3;
-  color: #fff;
+  background-color: white;
+  color: black;
+  opacity: 0.8;
   font-size: 30px;
-  padding-bottom: 6px;
+  font-weight: 400;
   border-width: 0;
 }
 
@@ -128,19 +130,23 @@ input[type="text"] {
   top: 10px;
   border: none;
   background: transparent;
-  font-size: 20px;
-
-  width: 313px;
+  font-size: 1.8rem;
+  width: 340px;
 }
 
 input[type="text"]:focus {
   outline: none;
-  box-shadow: inset 0 -3px 0 0 #a683e3;
+  box-shadow: inset 0 -3px 0 0 white;
+  opacity: 0.8;
+  font-size: 1.4rem;
+  font-weight: 200;
 }
 
 ::placeholder {
   color: grey;
   opacity: 1;
+  font-size: 1.4rem;
+  font-weight: 200;
 }
 
 footer {
