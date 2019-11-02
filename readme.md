@@ -1,4 +1,4 @@
-# React Calculator
+# To-do-list
 
 WORK IN PROGRESS.
 A to-do-list created for the purpose of learning EJS
